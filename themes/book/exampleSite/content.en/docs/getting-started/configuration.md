@@ -1,8 +1,15 @@
-baseURL = "https://sakurascanner.github.io/Semiconductor-device-modeling-with-SPICE-Notes/"
-locale = 'en-us'
-title = 'My New Book'
-theme = 'book'
+---
+title: Configuration
+weight: 30
+---
 
+# Configuration
+
+All theme parameters are set under `[params]` in your site config. Every parameter is optional.
+
+## Theme Parameters
+
+```toml {filename=hugo.toml}
 [params]
   # Color theme: 'light', 'dark' or 'auto'
   # Auto switches based on OS/browser preference
@@ -61,3 +68,69 @@ theme = 'book'
 
   # Only show languages that have translations for current page
   BookTranslatedOnly = false
+```
+
+## Search
+
+Full-text search is enabled by default using [Fuse.js](https://www.fusejs.io/). The search index is built at page load from a generated JSON file.
+
+```toml {filename=hugo.toml}
+[params]
+  BookSearch = true
+```
+
+To exclude a page from the search index, set `bookSearchExclude: true` in its frontmatter.
+
+If search is not working, verify that `baseURL` in your config matches the URL where the site is hosted. A mismatch prevents the search index from loading.
+
+## Hugo Site Configuration
+
+These Hugo settings are relevant for the theme
+
+```toml {filename=hugo.toml}
+# Preserve URL casing (recommended)
+disablePathToLower = true
+
+# Enable git metadata for "Last Modified" footer
+enableGitInfo = true
+```
+
+## Markup
+
+### Goldmark Renderer
+
+The `unsafe` option is **required** for Mermaid and KaTeX shortcodes to render correctly
+
+```toml {filename=hugo.toml}
+[markup.goldmark.renderer]
+  unsafe = true
+```
+
+### Table of Contents
+
+Control the heading levels included in the table of contents
+
+```toml {filename=hugo.toml}
+[markup.tableOfContents]
+  startLevel = 1
+  endLevel = 4
+```
+
+The `startLevel` and `endLevel` values apply globally. Individual pages can toggle the ToC on or off with the `bookToC` frontmatter parameter.
+
+## Output Formats
+
+The theme supports plain text output alongside HTML, useful for accessibility and LLMs
+
+```toml {filename=hugo.toml}
+[outputFormats.txt]
+  mediaType = 'text/plain'
+  baseName = 'source'
+  isPlainText = true
+
+[outputs]
+  home = ['html', 'txt', 'rss']
+  page = ['html', 'txt']
+  section = ['html', 'txt']
+```
+
