@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = "https://sakurascanner.github.io/Semiconductor-device-modeling-with-SPICE-Notes/"
 locale = 'en-us'
 title = 'My New Hugo Project'
 theme = 'ananke'
