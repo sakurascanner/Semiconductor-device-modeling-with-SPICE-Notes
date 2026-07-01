@@ -1,1 +1,1 @@
-*写入测试*
+这里是一名因机缘巧合从软件工程入坑EDA方向的小白。想要学习SPICE代码。但在我苦苦搜寻资料的时候，却发现并没有多少的国内教材来讲述这些知识。目前计划阅读《Semiconductor Device Modeling with SPICE》by Giuseppe Massobrio以及《Circuit Simulation》by Farid N. Najm两本。之后会逐渐补充其他资料。
