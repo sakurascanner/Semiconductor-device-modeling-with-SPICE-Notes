@@ -61,3 +61,5 @@ theme = 'book'
 
   # Only show languages that have translations for current page
   BookTranslatedOnly = false
+
+  BookMath = true
