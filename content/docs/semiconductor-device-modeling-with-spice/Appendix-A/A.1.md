@@ -1,4 +1,4 @@
-## A.1 半导体物理原理
+# A.1 半导体物理原理
 
 ### **A.1.1 平衡状态下载流子浓度**
 
@@ -113,10 +113,10 @@ J_{diff}=q(-D_p\frac{dp}{dx}+D_n\frac{dn}{dx})E \tag{A-12}
 除电流特性分类以外，也可以根据电荷属性进行电流的分类，净电子电流与净空穴电流（\\(J_n/J_p\\)）计算公式如下：
 
 ```katex
-J_{n}=q（p\mu_nE+D_n\frac{dn}{dx}） \tag{A-13b}
+J_{n}=q(n\mu_nE+D_n\frac{dn}{dx}) \tag{A-13b}
 ```
 ```katex
-J_{p}=q（p\mu_pE-D_p\frac{dp}{dx}） \tag{A-13a}
+J_{p}=q(p\mu_pE-D_p\frac{dp}{dx}) \tag{A-13a}
 ```
 
 **爱因斯坦关系**说明了漂移系数与扩散系数的关系，在这里直接给出公式，具体细节查阅文献：
